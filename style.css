@@ -31,6 +31,19 @@ body {
     flex-wrap: nowrap;
     width: 100%;
     transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
 }
 video {
     display: block;
@@ -39,16 +52,6 @@ video {
     height: auto;
     margin: 20px auto;
     object-fit: contain;
-}
-.cards {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 100%;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 0 15px;
 }
 .button_class {
     width: 100%;
