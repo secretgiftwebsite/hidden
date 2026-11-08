@@ -22,7 +22,8 @@ body {
     width: 100%;
     max-width: 500px;
     box-shadow: 0 0 30px 3px #fcaa07;
-    overflow: hidden;
+    overflow: hidden; 
+    isolation: isolate;
     position: relative;
     box-sizing: border-box;
 }
@@ -33,7 +34,6 @@ body {
     transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
-
 .cards {
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ body {
     min-width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0 25px;
+    padding: 0 15px;
 }
 video {
     display: block;
