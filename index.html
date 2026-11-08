@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="card">
+            <div id="login-screen" class="nameCheck">
+                <h2>✨ Welcome to this super secret website ✨</h2>
+                <h4 style="white-space: pre-line">Who are you?
+                    Only the correct person may see the super secret website
+                </h4>
+                <input id="name" type="text" placeholder="Type your name..." required>
+                <button type="button" onclick="checkName()">Enter</button>
+                <div id="trueFalse" class="trueFalse">
+                    <h3 id="trueFalseText"></h3>
+                </div>
+            </div>
+        </div>
+        <script>
+            function startActiveTrue() {
+                document.getElementById('trueFalse').style.display = 'block';
+                trueFalseText = document.getElementById('trueFalseText');
+                trueFalseText.textContent="Oh! It's you ^^";
+            }
+            function startActiveFalse() {
+                document.getElementById('trueFalse').style.display = 'block';
+                trueFalseText = document.getElementById('trueFalseText');
+                trueFalseText.textContent="Hey, get outta here! This is for Isabel 😠";
+            }
+            function stopActive() {
+                document.getElementById('trueFalse').style.display = 'none';
+            }
+            function checkName() {
+                var inputValue = document.getElementById("name").value.trim();
+
+                if (inputValue === "Isabel") {
+                    startActiveTrue()
+                    setTimeout(function() {
+                        stopActive()
+                        window.location.href = "hidden.html";
+                    }, 2000);
+                } else {
+                    startActiveFalse()
+                    setTimeout(function() {
+                        stopActive()
+                    }, 2000);
+                }
+            }
+        </script>
+    </body>
+</html>

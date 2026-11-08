@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Secret Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="updateButtonColors()">
+        <div class="card">
+            <div class="track" id="track">
+                <div class="cards">
+                    <h2 style="padding-bottom: 20px;" id="text0">HEY ISABELLLLLLLLLL 😊</h2>
+                    <h2 style="padding-bottom: 20px;" id="text1">Welcome to the SUPER SECRET website I made you</h2>
+                    <h2 style="padding-bottom: 40px;" id="text2">I see you've gotten through the super encrypted login screen</h2>
+                    <img width="340" height="280" src="Images/hi.png" style="padding-bottom: 0; align-self: end;">
+                </div>
+                <div class="cards">
+                    <h2 id="text3">If you're reading this right now, you're probably with me in ur house and said "yes" when I asked you to be my girlfriend</h2>
+                    <h2 style="padding-bottom: 20px; padding-top: 20px;" id="text4">(WOOHOO \(^^)/)</h2>
+                    <video width="300" height="200" autoplay muted loop>
+                        <source src="Images/happy.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="cards">
+                    <h2 id="text5">Maybe by now you've realized the website I was coding was this one, and it wasn't out of boredom.</h2>
+                    <h2 id="text6">And maybe you're wondering "what's in the box?"</h2>
+                    <img width="340" height="280" src="Images/curious.png">
+                </div>
+                <div class="cards">
+                    <h2 style="padding-bottom: 20px;">Well, don't open it just yet! If you keep going I've made you a small video explaining everything ^^</h2>
+                    <h2 style="padding-bottom: 40px;">If you'll just go to the next page</h2>
+                    <img src="Images/arrow.png">
+                </div>
+                <div class="cards">
+                    <h2 style="padding-bottom: 20px;">Before that tho, just please understand I've never edited a video like this so it's very very bad</h2>
+                    <h2 style="padding-bottom: 40px;">I tried making it a bit funny, but I'm not sure if I succeeded</h2>
+                </div>
+                <div class="cards">
+                    <h2 style="padding-bottom: 20px;">Also, one VERY LAST THING. Am I red at the time ur reading this?</h2>
+                    <h2 style="padding-bottom: 40px;">I am, aren't I?</h2>
+                    <h2 style="padding-bottom: 40px;">Ofc I am</h2>
+                    <h2 style="padding-bottom: 40px;">Anywayssss, enjoy your video now ^^</h2>
+                    <img src="Images/arrow.png">
+                </div>
+                <div class="cards">
+                    <iframe width="100%" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/PQi4wGv8j7U?modestbranding=1&rel=0" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="button_class">
+                <button id="previous" class="previous" onclick="buttonPrev(); updateButtonColors();">Prev</button>
+                <button id="next" class="next" onclick="buttonNext(); updateButtonColors();">Next</button>
+            </div>
+        </div>
+        <script>
+            const cards = document.querySelectorAll(".cards");
+            let currentIndex = 0;
+            buttonnext = document.getElementById("next")
+            buttonprev = document.getElementById("previous")
+            trackslide = document.getElementById("track")
+            function trackSlide() {
+                movement = currentIndex * -100
+                trackslide.style.transform = `translateX(${movement}%)`;
+            }
+            function updateButtonColors() {
+                if (currentIndex === cards.length - 1) {
+                    buttonnext.style.backgroundColor = "#685634";
+                } else {
+                    buttonnext.style.backgroundColor = "#fcaa07";
+                }
+                if (currentIndex === 0) {
+                    buttonprev.style.backgroundColor = "#685634";
+                } else {
+                    buttonprev.style.backgroundColor = "#fcaa07";
+                }
+            }
+            function buttonPrev() {
+                if (currentIndex > 0) {
+                    currentIndex = currentIndex - 1;
+                    trackSlide();
+                    updateButtonColors()
+                }
+            }
+            function buttonNext() {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex = currentIndex + 1;
+                    trackSlide();
+                    updateButtonColors()
+                }
+            }
+            function typeWritter() {
+
+            }
+        </script>
+    </body>
+</html>

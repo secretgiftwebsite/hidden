@@ -1,0 +1,122 @@
+            @font-face {
+                font-family: myFont;
+                src: url(Font/font.otf);
+            }
+            body {
+                background-color: #191919;
+                font-family: myFont;
+                color: #fcaa07;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .card {
+                background-color: #0D0D0D;
+                padding: 40px;
+                border-radius: 30px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                width: 500px;
+                box-shadow: 0 0 50px 5px #fcaa07;
+                overflow: hidden;
+                position: relative;
+            }
+            .track {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+                transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+                padding-bottom: 0px;
+            }
+            video {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                margin: 20px auto;
+                object-fit: contain;
+            }
+            .cards {
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 100%;
+                justify-content: center;
+                align-items: center;
+                min-width: 100%;
+                box-sizing: border-box;
+                padding-left: 70px;
+                padding-right: 70px;
+                padding-bottom: 0;
+            }
+            .button_class {
+                width: 500px;
+                text-align: right;
+            }
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+                color: #fcaa07;
+            }
+            h3{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            h4 {
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+            .nameCheck {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            label {
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 0.9rem;
+            }
+            input {
+                background-color: #0D0D0D;
+                border: 2px solid #181818;
+                border-radius: 50px;
+                padding: 12px 20px;
+                color: #f7f1e5;
+                font-size: 1rem;
+                text-align: center;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+            input:focus {
+                border-color: #fcaa07;
+            }
+            button {
+                background-color: #fcaa07;
+                border: none;
+                border-radius: 50px;
+                padding: 12px;
+                color: #0D0D0D;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.2s;
+            }
+            button:hover {
+                background-color: #ffb727;
+                transform: scale(1.02);
+            }
+            .hidden {
+                display: none;
+            }
+            .trueFalse {
+                display: none;
+                color: #fcaa07;
+            }
+            #welcome-screen {
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
